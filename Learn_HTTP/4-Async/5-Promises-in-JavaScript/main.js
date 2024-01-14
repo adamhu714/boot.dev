@@ -20,12 +20,14 @@ function runApplyDamageTest(damage, currentHP) {
   })
 }
 
-runApplyDamageTest(27, 50)
-await sleep(1100)
-runApplyDamageTest(50, 50)
-await sleep(1100)
-runApplyDamageTest(110, 100)
-await sleep(1100)
+(async () => {
+  runApplyDamageTest(27, 50)
+  await sleep(1100)
+  runApplyDamageTest(50, 50)
+  await sleep(1100)
+  runApplyDamageTest(110, 100)
+  await sleep(1100)
+})();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms))
